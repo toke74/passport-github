@@ -1,4 +1,5 @@
 const express = require("express");
+const routes = require("./routes/routes");
 
 //create app
 const app = express();
@@ -7,6 +8,9 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("passport auth with github strategy");
 });
+
+//create a middleware for our routes
+app.use(routes);
 
 //create port
 const port = process.env.PORT || 3000;
