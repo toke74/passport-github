@@ -1,5 +1,6 @@
 const express = require("express");
 const routes = require("./routes/routes");
+require("./config/passport");
 
 //create app
 const app = express();
