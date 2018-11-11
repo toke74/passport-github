@@ -3,12 +3,13 @@ const passport = require("passport");
 
 //auth login route
 router.get("/auth/login", (req, res) => {
-  res.send("you are logged in");
+  res.render("login", { user: req.user });
 });
 
 //auth logout route
 router.get("/auth/logout", (req, res) => {
-  res.send("you are logged out");
+  req.logout();
+  res.redirect("/");
 });
 
 //Use passport.authenticate(), specifying the 'Github' strategy, to authenticate requests
@@ -26,7 +27,8 @@ router.get(
   (req, res) => {
     // Successful authentication, redirect home.
     // res.redirect("/");
-    res.send("you reached the callback url");
+    // res.send("you reached the callback url");
+    res.redirect("/profile");
   }
 );
 

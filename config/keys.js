@@ -1,6 +1,10 @@
 module.exports = {
   github: {
-    clientID: "eb36640a6d838f8e7499",
-    clientSecret: "9be9cbd500f86443ff787e2cdf905fec37bba11a"
+    clientID: "9d3d5e332e8d89571c39",
+    clientSecret: "1756354957d613edb6db6e29b76103a897a385b7"
+  },
+  mongodb: "mongodb://toke:toke74@ds255930.mlab.com:55930/github-db",
+  session: {
+    cookiesKeys: "fgfffhhjfjhfhfghf565hghghtyrtyryhvhghghyyhghjghtrr343"
   }
 };
